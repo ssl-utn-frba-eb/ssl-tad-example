@@ -36,11 +36,8 @@ int peek_stack(StackIntPtr_t stack, int pos) {
 void
 stack_print(StackIntPtr_t stack)
 {
-    int i;
-
-    for(i = 0; i < stack->stack_pointer; i++) {
-      printf("Peeking stack pos %d: %d\n",i, stack->Array[i]);
-    }
+  for(int i = 0; i < stack->stack_pointer; i++)
+    printf("Peeking stack pos %d: %d\n",i, stack->Array[i]);
 }
 
 
