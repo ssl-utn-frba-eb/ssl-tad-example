@@ -4,6 +4,7 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+#include <readline/readline.h>
 
 /* Maximo tamanio del stack */
 #define STACK_MAX_SIZE 256

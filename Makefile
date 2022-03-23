@@ -1,4 +1,4 @@
-TARGET:=adt #program name
+TARGET:=adt#program name
 
 BIN:=./bin
 SOURCES:=./src
@@ -32,16 +32,16 @@ build: CFLAGS+=-O2
 build: mkdir $(OFILES)
 	$(CC) $(CFLAGS) $(OFILES) -o $(BIN)/$(TARGET)
 
-test: CFLAGS+=-I$(INCLUDES)/unity
+test: CFLAGS+=-lcspecs
 test: build $(TOFILES)
-	$(CC) $(CFLAGS) $(TOFILES) $(filter-out $(BUILD)/main.o,$(OFILES)) -o $(TARGET).test
-	./$(TARGET).test
+	$(CC) $(CFLAGS) $(TOFILES) $(filter-out $(BUILD)/main.o,$(OFILES)) -o $(BIN)/$(TARGET).test
 
 mkdir:
 	mkdir -p $(BIN)
 	mkdir -p $(BUILD)
 
 clean:
+	rm -rf $(BIN)
 	rm -rf $(BUILD)
 	rm -f $(TARGET)
 	rm -f $(TARGET).test

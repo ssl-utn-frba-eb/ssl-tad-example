@@ -1,0 +1,11 @@
+Initializing
+Now pushing values.
+New item 52
+New stack pos 1
+Peek value 0
+New item 300
+New stack pos 2
+Peeking stack pos 0: 52
+Peeking stack pos 1: 300
+Now popping value.
+Peeking stack pos 0: 52
