@@ -18,7 +18,7 @@ else
 endif
 
 CC:=gcc
-CFLAGS:=-std=c11 -I$(INCLUDES)
+CFLAGS:=-std=c11 -g -I$(INCLUDES)
 
 CFILES:=$(shell find $(SOURCES) -printf '%P ' -name '*.c')
 OFILES:=$(patsubst %.c,$(BUILD)/%.o,$(CFILES))
